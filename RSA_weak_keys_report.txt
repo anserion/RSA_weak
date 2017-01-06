@@ -1,0 +1,21 @@
+RSA weak pair generate
+enter primes P and Q from table (except 2)
+   2   3   5   7  11  13  17  19  23  29
+  31  37  41  43  47  53  59  61  67  71
+  73  79  83  89  97 101 103 107 109 113
+ 127
+P=17
+Q=23
+phi(P*Q)=352
+=========================
+auto generation mode
+n=P*Q=391 (9 bits)
+open key: e=53
+private key: d=93
+=========================
+manual generation mode
+e=29
+=========================
+n=P*Q=391 (9 bits)
+open key: e=29
+private key: d=85
