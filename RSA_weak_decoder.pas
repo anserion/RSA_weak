@@ -103,6 +103,21 @@ begin
       //печать промежуточного результата
       writeln('block',i:3,': s=',ss,'=',s_dec:4,'    c=',cc,'=',c_dec:4);
    end;
+   writeln('===========================');
+   writeln('decode result');
+   for i:=1 to length(c) do
+   begin
+      write(c[i]);
+      if (i mod (n_size-1))=0 then write(' ');
+   end;
+   writeln;
+
+   //"отрезаем" нули и одну единицу слева от декдированного ответа
+   //для извлечения исходного сообщения
+   j:=1; while c[j]='0' do j:=j+1;
+   j:=j+1; cc:=c; c:='';
+   for i:=j to length(cc) do c:=c+cc[i];
+   
    //печать окончательного результата
    writeln('===========================');
    writeln('binary result');

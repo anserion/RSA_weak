@@ -45,13 +45,15 @@ begin
    write('power='); readln(e);
    //ввод бинарного кода для разбиения на блоки и RSA-обработки
    write('s=');readln(s);
-   //выравнивание входного бинарного кода путем добавления нулей слева
+   //выравнивание входного бинарного кода путем добавления
+   //границы "01" и нулей для выравнивания слева
+   s:='01'+s;
    align_s:=(n_size-1)-(length(s) mod (n_size-1));
    if align_s=n_size-1 then align_s:=0;
    for i:=1 to align_s do s:='0'+s;
    //печать выровненного входного бинарного кода
    writeln('===========================');
-   writeln('add ',align_s,' zero bits to S');
+   writeln('add ',align_s,' zero bits and 01 to S');
    for i:=1 to length(s) do
    begin
       write(s[i]);
